@@ -1,11 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Full Stack Dev`,
+    description: `SIDDIK Mehdi is a Full Stack Engineer with amazing JavaScript skills.`,
+    author: `@smehdii`,
+    fullName: `SIDDIK Mehdi`,
+    twitterHandle: `https://twitter.com/viiirtual`,
+    githubHandle: `https://github.com/smehdii`,
+    // stackOverflowHandle: `https://stackoverflow.com/story/flexdinesh`,
+    devToHandle: `https://dev.to/smehdii`,
+    mediumHandle: `https://medium.com/@siddik.mehdi`,
+    linkedInHandle: `https://www.linkedin.com/in/mehdi-siddik/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,22 +21,33 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-javascript-frontmatter`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `portfolio`,
+        short_name: `portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#5badf0`,
+        theme_color: `#5badf0`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        // icon: `src/images/boy.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-117929089-1",
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+      },
+    },
   ],
 }
