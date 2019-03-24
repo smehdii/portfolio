@@ -6,7 +6,7 @@ module.exports = {
     fullName: `SIDDIK Mehdi`,
     twitterHandle: `https://twitter.com/viiirtual`,
     githubHandle: `https://github.com/smehdii`,
-    // stackOverflowHandle: `https://stackoverflow.com/story/flexdinesh`,
+    stackOverflowHandle: `https://stackoverflow.com/users/7195664/viirtual`,
     devToHandle: `https://dev.to/smehdii`,
     mediumHandle: `https://medium.com/@siddik.mehdi`,
     linkedInHandle: `https://www.linkedin.com/in/mehdi-siddik/`,
@@ -19,6 +19,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
       },
     },
     `gatsby-transformer-javascript-frontmatter`,

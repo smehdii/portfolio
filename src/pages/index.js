@@ -19,7 +19,7 @@ import SEO from "../components/seo"
 // import Layout from "@components/Layout"
 // import React from 'react'
 // import SEO from '@components/seo'
-// import NameBoard from '@components/NameBoard'
+import NameBoard from "../components/NameBoard"
 // import IBuildSection from '@components/IBuildSection'
 // import IBlogSection from '@components/IBlogSection'
 
@@ -29,6 +29,7 @@ const IndexPage = ({ data }) => (
       title="Full Stack Dev"
       keywords={[`developer`, `engineer`, `react`, `javascript`]}
     />
+    <NameBoard />
   </Layout>
 )
 
